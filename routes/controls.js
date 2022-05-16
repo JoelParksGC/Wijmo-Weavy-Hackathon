@@ -8,7 +8,7 @@ const rootDir = require('../utils/path');
 
 const router = express.Router();
 
-var token = { name: '', value: '' };
+const token = { name: '', value: '' };
 
 // Navigates to the control page
 router.get('/controls', (req, res, next) => {
@@ -28,6 +28,12 @@ router.post('/auth-login', (req, res, next) => {
     token.name = req.body.username;
     res.redirect('/controls');
 });
+
+router.post('/logout', (req, res, next) => {
+    token.name = '';
+    token.value = '';
+    res.redirect('/');
+})
 
 // Returns the JWT generated
 router.get('/token', (req, res, next) => {

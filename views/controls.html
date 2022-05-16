@@ -20,7 +20,11 @@
 </head>
 <body>
     <h1>Wijmo & Weavy Controls</h1>
-    <span id="userName" style="float: right; font-weight: bold;">User: </span>
+    <div style="float: right;">
+        <span id="userName">User: </span><br>
+        <form action="/logout" method="POST"><button type="submit">Logout</button></form>
+    </div>
+    <br>
     <main class="grid-layout">
         <div class="grid-flexgrid">
             <!-- Wijmo FleGrid -->
