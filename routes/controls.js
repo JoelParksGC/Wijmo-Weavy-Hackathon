@@ -8,7 +8,7 @@ const rootDir = require('../utils/path');
 
 const router = express.Router();
 
-var token = '';
+var token = { name: '', value: '' };
 
 // Navigates to the control page
 router.get('/controls', (req, res, next) => {
@@ -24,7 +24,8 @@ router.post('/auth-login', (req, res, next) => {
     }
     var jwt = njwt.create(claims, signingKey);
     jwt.setExpiration(new Date().getTime() + (60*60*1000));
-    token = jwt.compact();
+    token.value = jwt.compact();
+    token.name = req.body.username;
     res.redirect('/controls');
 });
 

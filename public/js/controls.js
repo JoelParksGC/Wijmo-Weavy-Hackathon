@@ -47,9 +47,13 @@ function init() {
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.open("GET", 'http://localhost:3000/token', false);
         xmlHttp.send(null);
-        return xmlHttp.responseText;
+        return JSON.parse(xmlHttp.response);
     }
 
+    var response = getJWTToken();
     // JSONWebToken for Weavy
-    var jwt = getJWTToken();
+    var jwt = response.value;
+    var username = response.name;
+
+    document.getElementById('userName').innerText = document.getElementById('userName').innerText + ' ' + username;
 }
