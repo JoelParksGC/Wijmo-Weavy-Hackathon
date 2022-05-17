@@ -19,6 +19,11 @@ const users = [
 
 const generateToken = (name) => {
 
+    if(!name){
+        console.log("User not set!");
+        return null;
+    }
+
     // get user from list
     const user = users.find((u) => u.name === name);
 
