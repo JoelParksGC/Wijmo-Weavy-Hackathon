@@ -50,20 +50,22 @@ function init() {
         return JSON.parse(xmlHttp.response);
     }
 
-    function getJWTTokenForWeavy() {
+    function tokenFactory() {
+        var response = getJWTToken();
+        
+        // set name
+        document.getElementById('userName').innerText = response.name;
+        
         // return token only
-        return getJWTToken().value;
+        return response.value;
     }
 
-    var response = getJWTToken();
-    // JSONWebToken for Weavy
-    var jwt = response.value;
-    var username = response.name;
+    
 
     // Weavy
     const weavy = new Weavy({
-        url: "https://ww-hackathon.weavy.io/",
-        jwt: getJWTTokenForWeavy
+        url: "https://ww-hackathon.weavy.io/", // replace this with your Weavy Sandbox url
+        jwt: tokenFactory
     });
     const messenger = weavy.app({ 
         id: "my-messenger", 
@@ -71,5 +73,5 @@ function init() {
         container: "#theMessenger",
       })
 
-    document.getElementById('userName').innerText = document.getElementById('userName').innerText + ' ' + username;
+    
 }
