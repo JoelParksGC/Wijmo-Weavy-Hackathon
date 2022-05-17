@@ -34,3 +34,16 @@ h1 {
     grid-area: two;
     width: 100%;
 }
+
+.btn {
+    width: 100%;
+    background-color: rgb(22, 186, 208);
+    color: black;
+    border: 1px solid black;
+}
+
+.btn:hover, .btn:focus {
+    background-color: rgb(18, 153, 171);
+    color: white;
+    border: 1px solid white;
+}
