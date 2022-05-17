@@ -50,10 +50,26 @@ function init() {
         return JSON.parse(xmlHttp.response);
     }
 
+    function getJWTTokenForWeavy() {
+        // return token only
+        return getJWTToken().value;
+    }
+
     var response = getJWTToken();
     // JSONWebToken for Weavy
     var jwt = response.value;
     var username = response.name;
+
+    // Weavy
+    const weavy = new Weavy({
+        url: "https://ww-hackathon.weavy.io/",
+        jwt: getJWTTokenForWeavy
+    });
+    const messenger = weavy.app({ 
+        id: "my-messenger", 
+        type: "messenger",
+        container: "#theMessenger",
+      })
 
     document.getElementById('userName').innerText = document.getElementById('userName').innerText + ' ' + username;
 }

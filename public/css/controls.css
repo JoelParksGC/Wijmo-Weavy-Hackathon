@@ -16,21 +16,31 @@ h1 {
 
 .grid-layout {
     display: grid;
-    gap: 1.5rem;
-    grid-auto-columns: minmax(0, 1fr);
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr;     
     grid-template-areas: 
-        'one two';
-    padding-block: 2rem;
-    width: 95%;
-    margin-inline: auto;
+      "grid grid messenger"
+      "chart chart messenger"
+      ". . ."; 
 }
 
-.grid-layout:nth-child(1) {
-    grid-area: one;
+.grid-flexgrid {
+    grid-area: grid;
     width: 100%;
 }
 
-.grid-layout:nth-child(2) {
-    grid-area: two;
+.grid-flexchart {
+    grid-area: chart;
     width: 100%;
+}
+
+.grid-messenger{
+    grid-area: messenger;
+}
+
+#theMessenger{
+   
+    height: 844px;
+    border: 1px solid #e4e4e4;
 }

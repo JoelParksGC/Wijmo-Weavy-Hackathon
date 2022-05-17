@@ -17,11 +17,17 @@ router.get('/controls', (req, res, next) => {
 
 // Generates JWT and redirects on 'login'
 router.post('/auth-login', (req, res, next) => {
-    var signingKey = secureRandom(256, { type: 'Buffer' });
+    //var signingKey = secureRandom(256, { type: 'Buffer' });
+    var signingKey = 'TtLzgH#]pgq3V87H';
+    
     var claims = {
         iss: "wijmo-weavy-hackathon",
         sub: req.body.username,
+        dir: "hackathon",
+        name: req.body.username,
+        //username: ""
     }
+
     var jwt = njwt.create(claims, signingKey);
     jwt.setExpiration(new Date().getTime() + (60*60*1000));
     token.value = jwt.compact();
