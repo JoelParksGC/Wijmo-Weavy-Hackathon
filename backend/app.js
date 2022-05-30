@@ -9,7 +9,7 @@ const loginRoutes = require('./routes/login');
 const controlRoutes = require('./routes/controls');
 
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 app.use(loginRoutes);
 app.use(controlRoutes);
