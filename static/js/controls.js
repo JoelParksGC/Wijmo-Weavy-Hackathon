@@ -42,36 +42,5 @@ function init() {
     //Creates Filter and binds it to FlexGrid
     var filter = new wijmo.grid.filter.FlexGridFilter(flexGrid);
 
-    // Gets the JWT used for Weavy
-    function getJWTToken() {
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open("GET", 'http://localhost:3000/token', false);
-        xmlHttp.send(null);
-        return JSON.parse(xmlHttp.response);
-    }
-
-    function tokenFactory() {
-        var response = getJWTToken();
-        
-        // set name
-        document.getElementById('userName').innerText = response.name;
-        
-        // return token only
-        return response.value;
-    }
-
-    
-
-    // Weavy
-    const weavy = new Weavy({
-        url: "https://ww-hackathon.weavy.io/", // replace this with your Weavy Sandbox url
-        jwt: tokenFactory
-    });
-    const messenger = weavy.app({ 
-        id: "my-messenger", 
-        type: "messenger",
-        container: "#theMessenger",
-      })
-
     
 }

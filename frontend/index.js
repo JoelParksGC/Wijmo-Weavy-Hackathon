@@ -1,1 +1,3 @@
-console.log("hello world");
+import "./messenger";
+
+console.log("Hello hackathon!");
