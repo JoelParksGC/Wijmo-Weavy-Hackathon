@@ -2,10 +2,10 @@
   "name": "wijmo-weavy",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "frontend/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --watch backend backend/server.js"
+    "start": "nodemon --watch backend --watch static backend/server.js"
   },
   "keywords": [],
   "author": "",
