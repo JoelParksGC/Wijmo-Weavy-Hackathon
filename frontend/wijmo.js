@@ -1,3 +1,11 @@
+// Wijmo imports
+import '@grapecity/wijmo.styles/wijmo.css';
+import '@grapecity/wijmo';
+import '@grapecity/wijmo.input';
+import { FlexGrid } from '@grapecity/wijmo.grid';
+import { FlexGridFilter } from '@grapecity/wijmo.grid.filter';
+import { FlexChart } from '@grapecity/wijmo.chart';
+
 wijmo.setLicenseKey('Hackathon,682396222396697#B0MZtVFdDRNpWU5EkRBdTR9YUbuh4QyJnMqhjQmVmM7UlcMZ6NNlXRZl6dvdke5FGWhVWTQ5WZnlGZFNUVwhmSP96UvNVQ9MWaxJFOupmZ8UVbD3SVHtScJJFdtlTUZ3Uav2kWh5Ee6YDb5YjNRVkWN5Ge8FWS724YjJ7Z8VGUOtmZ7E7Vyc7bkdEMVF5bTRDTshVYvo6KPpUQwdlQyNkSaJXV7FzQiV7MOVWOTpkaGZDM6dGc7k5RYxma0hzQycXTqZzcyATUHlGbrYjR6NGaUZHMsJEWQ9UVrFEaLlkZuBVSEFXZrllcoVzYjdWTVFWTiojITJCLiIjN6gzNCRENiojIIJCL4UTO8kTO9YTM0IicfJye35XX3JyMDBjQiojIDJCLiUmcvNEIv5mapdlI0IiTis7W0ICZyBlIsISN5ETM6ADI6ETNwIjMwIjI0ICdyNkIsICNxgDMyIDMyIiOiAHeFJCLi86boRXYrNWYIJiOiEmTDJCLicTO6YTOzIjMyYTOzIDO6IiOiQWSiwSfdtlOicGbmJCLiEjdyIDMyIiOiIXZ6JCLlNHbhZmOiI7ckJye0ICbuFkI1pjIEJCLi4TPRtGOWJ4LZpmcMJmakhlZ6g7czEkY7IlNZRkTmh6UV9UT6YldKdXM6ZlcyZmaTJ4Svw4ULpGWi5Gd6NVU7RUQ9Bjeoh4RqxkSoBXYKZHNpFWZYFTeiJVRvl7b8g7NzYGNDFFZLRyT');
 // Retrieves data from API
 function getData() {
@@ -8,7 +16,7 @@ function getData() {
 }
 var data = getData();
 // Creates FlexGrid and binds it to data
-var flexGrid = new wijmo.grid.FlexGrid('#theGrid', {
+var flexGrid = new FlexGrid('#theGrid', {
     autoGenerateColumns: false,
     // Defines the width and numeric format of the columns
     columns: [
@@ -21,9 +29,9 @@ var flexGrid = new wijmo.grid.FlexGrid('#theGrid', {
 });
 
 // Creates FlexChart and binds it to data
-var flexChart = new wijmo.chart.FlexChart('#theChart', {
+var flexChart = new FlexChart('#theChart', {
     header: 'Sales and Expenses by Country',
-    legend: { position: wijmo.chart.Position.Bottom },
+    legend: { position: 'Bottom' },
     // Binds the X axis of the FlexChart
     bindingX: 'country',
     // Binds the series of data to be displayed
@@ -37,4 +45,4 @@ var flexChart = new wijmo.chart.FlexChart('#theChart', {
 });
 
 //Creates Filter and binds it to FlexGrid
-var filter = new wijmo.grid.filter.FlexGridFilter(flexGrid);
+var filter = new FlexGridFilter(flexGrid);
