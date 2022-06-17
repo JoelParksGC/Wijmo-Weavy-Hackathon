@@ -1,8 +1,19 @@
-# Wijmo-Weavy-Hackathon
+# Wijmo Weavy Hackathon 2022
 
-Sample application for Wijmo and Weavy Hackathon.
+GrapeCity's Wijmo and Weavy are partnering up for a Hackathon! Focusing on real world issues across a variety of topics and using systems thinking to create innovative solutions. With Wijmo's UI component library and Weavy's API, we challenge developers to find ways to solve current issues, using real data.
 
-Sign up for the hackathon at https://weavy.com/hackathonwijmo to get a Weavy sandbox to play with.
+Signups are now open! Sign up at https://weavy.com/hackathonwijmo and get access to your own Weavy sandbox.
+
+For more information on the hackathon, check out our [Learn More](https://www.weavy.com/hackathonwijmo#learn-more) page.
+
+## Documentation, Demos, and API
+Wijmo and Weavy offer extensive documentation, demos, and API to help you get started building your application.
+
+- [Weavy Documentation](https://www.weavy.com/docs)
+- [Weavy Knowledgebase](https://www.weavy.com/kb)
+- [Wijmo Documentation](https://www.grapecity.com/wijmo/docs/GettingStarted/Introduction)
+- [Wijmo Demos](https://www.grapecity.com/wijmo/demos/)
+- [Wijmo API](https://www.grapecity.com/wijmo/api/)
 
 ## Getting started
 
