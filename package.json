@@ -12,7 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "@grapecity/wijmo.all": "^5.20221.842",
-    "@weavy/dropin-js": "^10.1.1",
+    "@weavy/dropin-js": "^11.1.0",
+    "@weavy/themes": "^11.1.0",
     "njwt": "^1.2.0",
     "secure-random": "^1.1.2"
   },

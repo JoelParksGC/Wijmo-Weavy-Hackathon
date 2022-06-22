@@ -1,5 +1,5 @@
     import Weavy from "@weavy/dropin-js";
-    import "@weavy/dropin-js/dist/weavy-dropin.css";
+    import "@weavy/themes/dist/weavy-default.css";
 
     async function tokenFactory() {
         var response = await fetch('/token').then((response) => response.json());
